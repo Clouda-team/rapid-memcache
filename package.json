@@ -1,0 +1,27 @@
+{
+    "name": "rapid-memcache",
+    "version": "0.1.0",
+    "description": "Memcache implemention for rapidjs data access layer",
+    "main": "index.js",
+    "scripts": {
+        "test": "rapid test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Clouda-team/rapid-memcache.git"
+    },
+    "keywords": [
+        "clouda+",
+        "rapidjs",
+        "memcache"
+    ],
+    "dependencies": {
+        "q": "*"
+    },
+    "author": "kyriosli",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Clouda-team/rapid-memcache/issues"
+    },
+    "homepage": "https://github.com/Clouda-team/rapid-memcache"
+}
