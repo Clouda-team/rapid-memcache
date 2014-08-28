@@ -169,7 +169,6 @@ function Memcached(options) {
         request: function (buf) {
             var deferred = q.defer();
             this.getConnection(function (err, conn) {
-                buf.writeUInt32BE(conn.requestId++, 12, true);
                 if (err) {
                     return deferred.reject(err);
                 }
@@ -207,7 +206,7 @@ function Memcached(options) {
             }, function (res) {
                 if (res.status) {// bad response, do not retry
                     end(conn);
-                    failAll(new Error(res.body.toString()));
+                    failAll(new Error(res.data.toString()));
                 } else {
                     conn.removeListener('error', connectfail);
                     conn.on('error', onerror);
